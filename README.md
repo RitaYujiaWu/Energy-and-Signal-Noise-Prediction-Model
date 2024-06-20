@@ -8,6 +8,17 @@ When a particle comes into the HPGe detector, it produces a waveform, or time se
   
 We are given access to two separate CSV files:   
 1. `HPGeData.csv` A CSV containing training data with information about 400 elementary particles which deposit their energy in an HPGe detector. We read this in as a DataFrame where the columns are different parameters. The columns are:
+
+
+| Column              | Description                                                                                                                                                                    |
+|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `tDrift50`          | Period from the Start of Rise (t<sub>SR</sub>) to when the waveform reaches 50% of Max Amp (t<sub>50</sub>), can also be written as t<sub>50</sub> − t<sub>SR</sub>.           |
+| `tDrift90`          | Period from the Start of Rise (t<sub>SR</sub>) to when the waveform reaches 90% of Max Amp (t<sub>90</sub>), can also be written as t<sub>90</sub> − t<sub>SR</sub>.           |
+| `tDrift100`         | Period from the Start of Rise (t<sub>SR</sub>) to when the waveform reaches Max Amp, can also be written as t<sub>MAXAMP</sub> − t<sub>SR</sub>.                               |
+| `blnoise`           | The standard deviation of amplitude values a<sub>i</sub> in the green-colored region.                                                                                          |
+| `tslope`            | The slope of the waveform tail.                                                                                                                                                |
+| `Max_Amp`           | Maximum amplitude of the waveform, or the largest number among all a<sub>i</sub>s                                                                                              |
+
 | Column              | Description                                                                                                                                                                    |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `tDrift50`          | Period from the Start of Rise (t<sub>SR</sub>) to when the waveform reaches 50% of Max Amp (t<sub>50</sub>), can also be written as t<sub>50</sub> − t<sub>SR</sub>.           |
