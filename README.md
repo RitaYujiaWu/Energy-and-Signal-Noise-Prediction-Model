@@ -6,8 +6,18 @@ When a particle comes into the HPGe detector, it produces a waveform, or time se
  - Find the best prediction rule using regression to estimate the energy of each HPGe detector waveform.
  - Produce a ”classification score” for each HPGe detector waveform, for which the signal data point (data point with a label of 1) should have a higher score than the noise data point (data point with a label of 0).
   
-We are given access to two separate CSV files.  
-2. A CSV containing training data with information about 3000 elementary particles which deposits their energy in an HPGe detector. Some of them are signal-like, i.e. they exhibit the same shape with neutrinoless double-beta decay, others are noise-like, i.e. they look different from neutrinoless double-beta decay. This is a labeled dataset where signal-like data has a label of 1 and background-like data has a label of 0. We read this as a dataframe where the columns are different parameters. The columns are:
+We are given access to two separate CSV files:   
+1. `HPGeData.csv` A CSV containing training data with information about 400 elementary particles which deposits their energy in an HPGe detector. We read this in as a DataFrame where the columns are different parameters. The columns are:
+| Column              | Description                                                                                                                                                                      |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `tDrift50`          | Period from the Start of Rise (t<sup>SR</sup>) to when the waveform reaches 50% of Max Amp (t<sup>50</sup>), can also be written as t<sup>50</sup> − t<sup>SR</sup>.           |
+| `tDrift90`          | Period from the Start of Rise (t<sup>SR</sup>) to when the waveform reaches 90% of Max Amp (t<sup>90</sup>), can also be written as t<sup>90</sup> − t<sup>SR</sup>.           |
+| `tDrift100`         | Period from the Start of Rise (t<sup>SR</sup>) to when the waveform reaches Max Amp, can also be written as t<sup>MAXAMP</sup> − t<sup>SR</sup>.                                 |
+| `blnoise`           | The standard deviation of amplitude values ai in the green-colored region.                                                                                                       |
+| `tslope`            | The slope of the waveform tail.                                                                                                                                                  |
+| `Max_Amp`           | Maximum amplitude of the waveform, or the largest number among all at<sup>i</sup>s                                                                                               |
+  
+2. `training_classification.csv` A CSV containing training data with information about 3000 elementary particles which deposits their energy in an HPGe detector. Some of them are signal-like, i.e. they exhibit the same shape with neutrinoless double-beta decay, others are noise-like, i.e. they look different from neutrinoless double-beta decay. This is a labeled dataset where signal-like data has a label of 1 and background-like data has a label of 0. We read this as a DataFrame where the columns are different parameters. The columns are:
 | Column              | Description                                                                                                                          |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | `tDrift50`          | Period from the Start of Rise (tSR) to when the waveform reaches 50% of Max Amp (t50), can also be written as t50 − tSR.           |
