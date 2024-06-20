@@ -1,5 +1,6 @@
 # Energy-and-Signal-Noise-Prediction-Model
 (This is a project for DSC40A at UCSD)  
+By: Rita Wu  
   
 High-Purity Germanium (HPGe) detector is one of the most sensitive detectors human beings have ever manufactured. It is sensitive in the sense that it measures the energy of elementary particles (electrons, photons, etc) very accurately. Because of this, HPGe detectors have a wide range of applications, including the search for neutrinos and dark matter, medical imaging, as well as nuclear non-proliferation.  
 When a particle comes into the HPGe detector, it produces a waveform, or time series data, as shown in the picture below. A time series is a sequence of data points that occur in successive order over some period of time. More formally, we can define time series this way: for each data point, a time series contains n pairs of ti, ai where ti is the ith time sample and ai is the value at the ith time sample. To simplify this problem, we extract certain features from the HPGe time series to build **two prediction models**:
