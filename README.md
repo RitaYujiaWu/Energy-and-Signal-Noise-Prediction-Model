@@ -18,7 +18,7 @@ We are given access to two separate CSV files:
 | `blnoise`           | The standard deviation of amplitude values a<sub>i</sub> in the green-colored region.                                                                                          |
 | `tslope`            | The slope of the waveform tail.                                                                                                                                                |
 | `Max_Amp`           | Maximum amplitude of the waveform, or the largest number among all a<sub>i</sub>s                                                                                              |
-
+  
   
 2. `training_classification.csv` A CSV containing training data with information about 3000 elementary particles which deposit their energy in an HPGe detector. Some of them are signal-like, i.e. they exhibit the same shape with neutrinoless double-beta decay, others are noise-like, i.e. they look different from neutrinoless double-beta decay. This is a labeled dataset where signal-like data has a label of 1 and background-like data has a label of 0. We read this as a DataFrame where the columns are different parameters. The columns are:
 
