@@ -18,15 +18,6 @@ We are given access to two separate CSV files:
 | `blnoise`           | The standard deviation of amplitude values a<sub>i</sub> in the green-colored region.                                                                                          |
 | `tslope`            | The slope of the waveform tail.                                                                                                                                                |
 | `Max_Amp`           | Maximum amplitude of the waveform, or the largest number among all a<sub>i</sub>s                                                                                              |
-
-| Column              | Description                                                                                                                                                                    |
-|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `tDrift50`          | Period from the Start of Rise (t<sub>SR</sub>) to when the waveform reaches 50% of Max Amp (t<sub>50</sub>), can also be written as t<sub>50</sub> − t<sub>SR</sub>.           |
-| `tDrift90`          | Period from the Start of Rise (t<sub>SR</sub>) to when the waveform reaches 90% of Max Amp (t<sub>90</sub>), can also be written as t<sub>90</sub> − t<sub>SR</sub>.           |
-| `tDrift100`         | Period from the Start of Rise (t<sub>SR</sub>) to when the waveform reaches Max Amp, can also be written as t<sub>MAXAMP</sub> − t<sub>SR</sub>.                               |
-| `blnoise`           | The standard deviation of amplitude values ai in the green-colored region.                                                                                                     |
-| `tslope`            | The slope of the waveform tail.                                                                                                                                                |
-| `Max_Amp`           | Maximum amplitude of the waveform, or the largest number among all a<sub>i</sub>s                                                                                              |
   
 2. `training_classification.csv` A CSV containing training data with information about 3000 elementary particles which deposit their energy in an HPGe detector. Some of them are signal-like, i.e. they exhibit the same shape with neutrinoless double-beta decay, others are noise-like, i.e. they look different from neutrinoless double-beta decay. This is a labeled dataset where signal-like data has a label of 1 and background-like data has a label of 0. We read this as a DataFrame where the columns are different parameters. The columns are:
 | Column              | Description                                                                                                                                                                    |
@@ -34,8 +25,9 @@ We are given access to two separate CSV files:
 | `tDrift50`          | Period from the Start of Rise (t<sub>SR</sub>) to when the waveform reaches 50% of Max Amp (t<sub>50</sub>), can also be written as t<sub>50</sub> − t<sub>SR</sub>.           |
 | `tDrift90`          | Period from the Start of Rise (t<sub>SR</sub>) to when the waveform reaches 90% of Max Amp (t<sub>90</sub>), can also be written as t<sub>90</sub> − t<sub>SR</sub>.           |
 | `tDrift100`         | Period from the Start of Rise (t<sub>SR</sub>) to when the waveform reaches Max Amp, can also be written as t<sub>MAXAMP</sub> − t<sub>SR</sub>.                               |
-| `blnoise`           | The standard deviation of amplitude values ai in the green-colored region.                                                                                                     |
+| `blnoise`           | The standard deviation of amplitude values a<sub>i</sub> in the green-colored region.                                                                                          |
 | `tslope`            | The slope of the waveform tail.                                                                                                                                                |
-| `Energy`            | The energy of each waveform, i.e. the target of the previous challenge.                                                                                                        |
+| `Energy`            | The energy of each waveform, i.e., the target of the previous challenge.                                                                                                       |
 | `Current Amplitude` | A new parameter extracted from the waveform, by taking a derivative of the waveform and reading out the maximum of the derivative.                                             |
+
            
