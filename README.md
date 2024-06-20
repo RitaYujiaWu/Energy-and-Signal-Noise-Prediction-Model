@@ -32,4 +32,7 @@ We are given access to two separate CSV files:
 | `Energy`            | The energy of each waveform, i.e. the target of the previous challenge.                                                                                                        |
 | `Current Amplitude` | A new parameter extracted from the waveform, by taking a derivative of the waveform and reading out the maximum of the derivative.                                             |
 
-
+  
+## Model and Results
+- For the first model, we create our design matrix using `Max_Amp`, `log(blnoise)`, `|tslope|<sup>e</sup>`, and `Max_Amp * blnoise` as functions and features. We finally get a test (MSE) score of **897.53**.
+- For the second model, we first calculate the likelihood using PDF and then finalize it by adding the weights: `(tDrift50 + 0.1) * (blnoise + 6) * (tslope + 5) * (Current Amplitude + 4) / (tDrift100 + 0.1)`. We finally get a test (ROC AUC Score) score of **0.8419**.
