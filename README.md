@@ -27,7 +27,5 @@ We are given access to two separate CSV files:
 | `tDrift100`         | Period from the Start of Rise (t<sub>SR</sub>) to when the waveform reaches Max Amp, can also be written as t<sub>MAXAMP</sub> − t<sub>SR</sub>.                               |
 | `blnoise`           | The standard deviation of amplitude values a<sub>i</sub> in the green-colored region.                                                                                          |
 | `tslope`            | The slope of the waveform tail.                                                                                                                                                |
-| `Energy`            | The energy of each waveform, i.e., the target of the previous challenge.                                                                                                       |
+| `Energy`            | The energy of each waveform, i.e. the target of the previous challenge.                                                                                                        |
 | `Current Amplitude` | A new parameter extracted from the waveform, by taking a derivative of the waveform and reading out the maximum of the derivative.                                             |
-
-           
